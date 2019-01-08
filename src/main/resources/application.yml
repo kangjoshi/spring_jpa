@@ -2,5 +2,12 @@ server:
   port: 8081
 
 spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    driver-class-name: org.h2.Driver
   jpa:
     show-sql: true
+    hibernate:
+      use-new-id-generator-mappings: true
+      ddl-auto: create
